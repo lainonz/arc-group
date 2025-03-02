@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARC Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Ini sebenernya biru males ganti nama
+
+              "rose-dark": "#0F0910", // Lebih gelap
+              "rose-light": "#00B4D8", // Pink light lebih cerah
+              "rose-accent": "#FF7BA3", // Accent pink lebih cerah
+              "rose-primary": "#00B4D8", // Biru lebih cerah
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        background-color: #0a060a; /* Lebih gelap */
+      }
+
+      .gallery-scroll {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        animation: scroll 25s linear infinite;
+      }
+
+      .gallery-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .hero-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff5c8d' fill-opacity='0.15'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body class="text-gray-200">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-10 bg-rose-dark/80 backdrop-blur-md border-b border-rose-primary/20"
+    >
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <a
+            href="#"
+            class="text-2xl font-bold text-rose-primary flex items-center"
+          >
+            <span class="bg-rose-primary text-rose-dark p-2 rounded-lg mr-2"
+              >ARC</span
+            >
+            <span>Group</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="relative group">
+              <span
+                class="text-gray-300 hover:text-rose-primary transition-colors"
+                >Home</span
+              >
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-primary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="#about" class="relative group">
+              <span
+                class="text-gray-300 hover:text-rose-primary transition-colors"
+                >About</span
+              >
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-primary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="#gallery" class="relative group">
+              <span
+                class="text-gray-300 hover:text-rose-primary transition-colors"
+                >Gallery</span
+              >
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-primary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="#members" class="relative group">
+              <span
+                class="text-gray-300 hover:text-rose-primary transition-colors"
+                >Members</span
+              >
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-primary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a href="#contact" class="relative group">
+              <span
+                class="text-gray-300 hover:text-rose-primary transition-colors"
+                >Contact</span
+              >
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-primary group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+          </div>
+
+          <button
+            class="bg-rose-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-rose-primary/30 transition-all hover:-translate-y-1"
+          >
+            ?
+          </button>
+
+          <button class="md:hidden text-rose-primary text-xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Modern Background -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center hero-pattern relative px-12"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-rose-dark/95 to-rose-dark/80"
+      ></div>
+      <div class="container mx-auto px-4 py-32 relative z-1">
+        <div
+          class="flex flex-col justify-around md:flex-row items-center gap-12"
+        >
+          <div class="md:w-1/2 space-y-6">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+              We are <span class="text-rose-primary">ARC</span> Group
+              <span class="block mt-2">Creative & Professional</span>
+            </h1>
+            <p class="text-lg text-gray-300">
+              A team of 10 passionate individuals working together to create
+              amazing experiences. We combine creativity, technology, and
+              strategy to deliver outstanding results.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#about"
+                class="bg-rose-primary hover:bg-rose-accent text-white px-8 py-3 rounded-full shadow-lg hover:shadow-rose-primary/30 transition-all flex items-center gap-2"
+              >
+                <span>Discover</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a
+                href="#gallery"
+                class="border border-rose-primary text-rose-primary hover:bg-rose-primary/10 px-8 py-3 rounded-full transition-all flex items-center gap-2"
+              >
+                <span>Our Work</span>
+                <i class="fas fa-images"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="relative mx-auto">
+              <div
+                class="w-72 h-72 md:w-96 md:h-96 bg-rose-primary/20 rounded-full absolute top-4 left-4 animate-pulse"
+              ></div>
+              <div
+                class="w-72 h-72 md:w-96 md:h-96 bg-rose-dark p-2 rounded-full relative z-1 border-4 border-rose-primary/30 shadow-2xl"
+              >
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b2739a7678eb0fcd68a6ecd7ad80"
+                  alt="ARC Group"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div
+                class="absolute -bottom-6 -right-6 bg-rose-primary text-white rounded-full w-24 h-24 flex items-center justify-center font-bold text-2xl shadow-lg"
+              >
+                ARC
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 bg-gradient-to-b from-rose-dark to-[#080508]"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            About <span class="text-rose-primary">Us</span>
+            <span class="block w-full h-1 bg-rose-primary mt-2"></span>
+          </h2>
+          <p class="text-gray-300">
+            We are a collective of creative minds, tech enthusiasts and
+            visionaries who came together to form ARC Group. Our mission is to
+            redefine excellence in everything we do.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-[#140c14]/80 p-8 rounded-xl border border-rose-primary/10 group hover:border-rose-primary/30 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-rose-primary/5"
+          >
+            <div
+              class="w-16 h-16 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-3xl mb-6 group-hover:bg-rose-primary group-hover:text-white transition-all"
+            >
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Creative Thinking</h3>
+            <p class="text-gray-400">
+              We approach every project with fresh perspectives and innovative
+              ideas, challenging conventions to deliver unique solutions.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#140c14]/80 p-8 rounded-xl border border-rose-primary/10 group hover:border-rose-primary/30 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-rose-primary/5"
+          >
+            <div
+              class="w-16 h-16 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-3xl mb-6 group-hover:bg-rose-primary group-hover:text-white transition-all"
+            >
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Collaborative Spirit</h3>
+            <p class="text-gray-400">
+              Our team of 10 members works in perfect harmony, combining diverse
+              skills and perspectives to achieve excellence in every project.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#140c14]/80 p-8 rounded-xl border border-rose-primary/10 group hover:border-rose-primary/30 transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-rose-primary/5"
+          >
+            <div
+              class="w-16 h-16 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-3xl mb-6 group-hover:bg-rose-primary group-hover:text-white transition-all"
+            >
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Pushing Boundaries</h3>
+            <p class="text-gray-400">
+              We're never satisfied with the status quo. Our passion drives us
+              to continuously explore new horizons and push the boundaries of
+              what's possible.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 bg-[#140c14]/50 p-8 rounded-2xl border border-rose-primary/20"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/3">
+              <img
+                src="https://en.anmosugoi.com/wp-content/uploads/2025/01/Ellen-Joe-Zenless-Zone-Zero-2.webp"
+                alt="Our Story"
+                class="rounded-xl shadow-lg"
+              />
+            </div>
+            <div class="md:w-2/3">
+              <h3 class="text-2xl font-bold mb-4 text-rose-primary">
+                Our Story
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Founded in 2022, ARC Group started as a small team of friends
+                with a shared passion for excellence. Today, we've grown into a
+                cohesive unit of 10 talented individuals, each bringing unique
+                skills and perspectives to the table.
+              </p>
+              <p class="text-gray-300">
+                Our name "ARC" represents the bridge we build between problems
+                and solutions, between creativity and technology, between dreams
+                and reality. We believe in making meaningful connections that
+                lead to extraordinary outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Auto-scrolling) -->
+    <section
+      id="gallery"
+      class="py-20 bg-gradient-to-b from-[#080508] to-rose-dark"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            Our <span class="text-rose-primary">Gallery</span>
+            <span class="block w-full h-1 bg-rose-primary mt-2"></span>
+          </h2>
+          <p class="text-gray-300">
+            A glimpse into our journey, our team activities, and the moments
+            that define us.
+          </p>
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div class="gallery-scroll flex gap-4 py-4 w-[200%]">
+            <!-- Will auto-scroll with CSS animation -->
+            <div
+              class="min-w-[300px] h-64 bg-[#140c14] rounded-xl overflow-hidden group"
+            >
+              <img
+                src="https://en.anmosugoi.com/wp-content/uploads/2025/01/Ellen-Joe-Zenless-Zone-Zero-2.webp"
+                alt="Gallery Image 1"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-rose-primary hover:text-rose-accent transition-colors"
+          >
+            <span>View All Photos</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Members Section -->
+    <section
+      id="members"
+      class="py-20 bg-gradient-to-b from-rose-dark to-[#080508]"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            Our <span class="text-rose-primary">Team</span>
+            <span class="block w-full h-1 bg-rose-primary mt-2"></span>
+          </h2>
+          <p class="text-gray-300">
+            Meet the talented individuals who make ARC Group an incredible team.
+          </p>
+        </div>
+
+        <div class="flex gap-4 justify-center flex-wrap">
+          <!-- Team Member Card -->
+          <div
+            class="bg-gradient-to-br from-[#140c14]/80 to-[#0A060A] rounded-2xl overflow-hidden shadow-xl border border-rose-primary/20 group"
+          >
+            <div class="h-52 overflow-hidden">
+              <img
+                src="https://i.pinimg.com/originals/4e/e8/d9/4ee8d9fa13b7f773349bfa29cc18f859.jpg"
+                alt="Team Member"
+                class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+              />
+            </div>
+            <div class="p-6 relative">
+              <!-- Avatar -->
+              <div
+                class="absolute -top-10 right-6 w-24 h-24 bg-rose-primary rounded-full border-4 border-[#0A060A] overflow-hidden"
+              >
+                <img
+                  src="https://akcdn.detik.net.id/api/wm/2022/11/14/han-so-hee-11_169.jpeg"
+                  alt="Avatar"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Badge Icon -->
+              <div
+                class="flex absolute top-3 left-6 flex items-center space-x-2 bg-[#1a1a1a] p-1 rounded-md"
+              >
+                <i class="fab fa-react text-md text-blue-500"></i>
+                <i class="fab fa-laravel text-md text-red-500"></i>
+                <i class="fab fa-linux text-md text-yellow-500"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-1 mt-4">Farrel Raxa Sigak</h3>
+              <p class="text-rose-primary mb-4">Web Developer</p>
+              <p class="text-gray-400 mb-6">Hai</p>
+              <div class="flex gap-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 bg-gradient-to-b from-rose-dark to-[#080508]"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            Get In <span class="text-rose-primary">Touch</span>
+            <span class="block w-full h-1 bg-rose-primary mt-2"></span>
+          </h2>
+          <p class="text-gray-300">
+            Have a question or want to work with us? Reach out and let's start a
+            conversation.
+          </p>
+        </div>
+
+        <div
+          class="bg-[#140c14]/50 p-8 rounded-2xl border border-rose-primary/20 max-w-4xl mx-auto"
+        >
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/3">
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-xl"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-1">Location</h3>
+                    <p class="text-gray-400">Kota Bandung</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-xl"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-1">Email</h3>
+                    <p class="text-gray-400">hello@example.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 bg-rose-primary/10 text-rose-primary rounded-lg flex items-center justify-center text-xl"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold mb-1">Phone</h3>
+                    <p class="text-gray-400">+1 234 567 8900</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-2/3">
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      class="w-full bg-[#0A060A]/90 text-white p-4 rounded-lg border border-rose-primary/20 focus:border-rose-primary focus:outline-none transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      class="w-full bg-[#0A060A]/90 text-white p-4 rounded-lg border border-rose-primary/20 focus:border-rose-primary focus:outline-none transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    class="w-full bg-[#0A060A]/90 text-white p-4 rounded-lg border border-rose-primary/20 focus:border-rose-primary focus:outline-none transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    rows="5"
+                    placeholder="Your Message"
+                    class="w-full bg-[#0A060A]/90 text-white p-4 rounded-lg border border-rose-primary/20 focus:border-rose-primary focus:outline-none transition-colors"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="bg-rose-primary text-white px-8 py-4 rounded-lg hover:bg-rose-accent transition-colors w-full md:w-auto"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0A060A] py-12 border-t border-rose-primary/20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-8 md:mb-0">
+            <a
+              href="#"
+              class="text-2xl font-bold text-rose-primary flex items-center"
+            >
+              <span class="bg-rose-primary text-rose-dark p-2 rounded-lg mr-2"
+                >ARC</span
+              >
+              <span>Group</span>
+            </a>
+            <p class="text-gray-400 mt-2 max-w-md">
+              A creative collective of 10 talented individuals pushing the
+              boundaries of innovation and excellence.
+            </p>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-rose-primary">
+                Quick Links
+              </h3>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#home"
+                    class="text-gray-400 hover:text-rose-primary transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-rose-primary transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gallery"
+                    class="text-gray-400 hover:text-rose-primary transition-colors"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#members"
+                    class="text-gray-400 hover:text-rose-primary transition-colors"
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-rose-primary transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-rose-primary">
+                Connect
+              </h3>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-rose-primary/10 text-rose-primary rounded-full flex items-center justify-center hover:bg-rose-primary hover:text-white transition-colors"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-rose-primary/10 mt-12 pt-6 text-center text-gray-500"
+        >
+          <p>&copy; 2025 ARC Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Animated Particle Background -->
+    <div
+      class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden opacity-20"
+    >
+      <div
+        class="absolute w-2 h-2 bg-rose-primary rounded-full top-1/4 left-1/4 animate-particle"
+      ></div>
+      <div
+        class="absolute w-1.5 h-1.5 bg-rose-accent rounded-full top-1/3 right-1/4 animate-particle animation-delay-2000"
+      ></div>
+      <div
+        class="absolute w-1 h-1 bg-rose-light rounded-full bottom-1/4 left-1/3 animate-particle animation-delay-3000"
+      ></div>
+      <div
+        class="absolute w-2 h-2 bg-rose-primary rounded-full top-3/4 right-1/3 animate-particle animation-delay-1500"
+      ></div>
+    </div>
+
+    <style>
+      /* Particle Animation */
+      @keyframes particle {
+        0% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: translate(100px, -50px) scale(0.8);
+          opacity: 0.4;
+        }
+        100% {
+          transform: translate(200px, 100px) scale(0);
+          opacity: 0;
+        }
+      }
+
+      .animate-particle {
+        animation: particle 8s linear infinite;
+        filter: blur(1px);
+      }
+
+      .animation-delay-1500 {
+        animation-delay: 1.5s;
+      }
+
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+
+      .animation-delay-3000 {
+        animation-delay: 3s;
+      }
+    </style>
+  </body>
+</html>
