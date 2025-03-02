@@ -2,8 +2,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -21,8 +21,8 @@ const teamMembers = [
   {
     name: "Herlangga Maulani",
     role: "Penetration Tester",
-    image: "/assets/banner/girl.gif",
-    avatar: "/assets/avatar/ellen.webp",
+    image: "assets/banner/girl.gif",
+    avatar: "assets/avatar/ellen.webp",
     skills: [
       { icon: "fab fa-react", color: "text-blue-500" },
       { icon: "fab fa-laravel", color: "text-red-500" },
@@ -45,8 +45,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -64,8 +64,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -83,8 +83,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -102,8 +102,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -121,8 +121,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -140,8 +140,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -159,8 +159,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
@@ -178,8 +178,8 @@ const teamMembers = [
   {
     name: "-",
     role: "-",
-    image: "/assets/banner/default.jpg",
-    avatar: "/assets/avatar/default.jpg",
+    image: "assets/banner/default.jpg",
+    avatar: "assets/avatar/default.jpg",
     skills: [
       //   { icon: "fab fa-react", color: "text-blue-500" },
       //   { icon: "fab fa-laravel", color: "text-red-500" },
