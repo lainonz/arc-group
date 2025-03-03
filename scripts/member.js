@@ -35,7 +35,10 @@ const teamMembers = [
     ],
     message: "I love Kim Minjeong and Kim Chaewon",
     socialLinks: [
-      { icon: "fab fa-instagram", url: "https://www.instagram.com/raffasha.suba/" },
+      {
+        icon: "fab fa-instagram",
+        url: "https://www.instagram.com/raffasha.suba/",
+      },
       { icon: "fab fa-github", url: "https://github.com/Junkyii" },
       {
         icon: "fab fa-linkedin-in",
@@ -69,22 +72,29 @@ const teamMembers = [
     ],
   },
   {
-    name: "-",
-    role: "-",
-    image: "assets/banner/default.jpg",
-    avatar: "assets/avatar/default.jpg",
+    name: "Irsyad Hidayat",
+    role: "Web Developer",
+    image: "assets/banner/",
+    avatar: "assets/avatar/kurumi.webp",
     skills: [
-      //   { icon: "fab fa-react", color: "text-blue-500" },
-      //   { icon: "fab fa-laravel", color: "text-red-500" },
-      //   { icon: "fab fa-linux", color: "text-yellow-500" },
+      { icon: "fab fa-react", color: "text-blue-500" },
+      { icon: "fab fa-laravel", color: "text-red-500" },
+      { icon: "fa-brands fa-node-js", color: "text-green-500" },
       { icon: "fab fa-circle-xmark", color: "text-red-500" },
     ],
-    message: "-",
+    message: "Building experiences, ensuring quality",
     socialLinks: [
-      { icon: "fab fa-instagram", url: "#" },
-      { icon: "fab fa-github", url: "#" },
-      { icon: "fab fa-linkedin-in", url: "#" },
-      { icon: "fas fa-envelope", url: "#" },
+      {
+        icon: "fab fa-instagram",
+        url: "https://www.instagram.com/irsyad_lya",
+      },
+      { icon: "fab fa-github", url: "https://github.com/zeroyadi" },
+      {
+        icon: "fab fa-linkedin-in",
+        url: "https://www.linkedin.com/in/irsyad-hidayat",
+      },
+      { icon: "fas fa-envelope", url: "mailto:kaiyadiyadi024@gmail.com" },
+      { icon: "fas fa-globe", url: "https://irsyad-v2-five.vercel.app" },
     ],
   },
   {
