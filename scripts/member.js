@@ -5,16 +5,19 @@ const teamMembers = [
     image: "assets/banner/light.gif",
     avatar: "assets/avatar/arsal.jpg",
     skills: [
-        { icon: "fab fa-react", color: "text-blue-500" },
-        { icon: "fab fa-laravel", color: "text-red-500" },
-        { icon: "fa-brands fa-node-js", color: "text-green-500" },
+      { icon: "fab fa-react", color: "text-blue-500" },
+      { icon: "fab fa-laravel", color: "text-red-500" },
+      { icon: "fa-brands fa-node-js", color: "text-green-500" },
       { icon: "fab fa-circle-xmark", color: "text-red-500" },
     ],
     message: "Humble",
     socialLinks: [
       { icon: "fab fa-instagram", url: "https://instagram.com/_arsalnaufal" },
       { icon: "fab fa-github", url: "https://github.com/kanaee-cloud" },
-      { icon: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/arsal-naufal/" },
+      {
+        icon: "fab fa-linkedin-in",
+        url: "https://www.linkedin.com/in/arsal-naufal/",
+      },
       { icon: "fas fa-envelope", url: "mailto:arsalnaufal2007@gmail.com" },
       { icon: "fas fa-globe", url: "https://raldelrey.my.id" },
     ],
@@ -30,8 +33,7 @@ const teamMembers = [
       { icon: "fab fa-linux", color: "text-yellow-500" },
       { icon: "fa-brands fa-font-awesome", color: "text-green-500" },
     ],
-    message:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    message: "0xFF",
     socialLinks: [
       { icon: "fab fa-instagram", url: "https://instagram.com/herlanggamm" },
       { icon: "fab fa-github", url: "https://github.com/lainonz" },
