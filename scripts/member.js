@@ -74,7 +74,7 @@ const teamMembers = [
   {
     name: "Irsyad Hidayat",
     role: "Web Developer",
-    image: "assets/banner/",
+    image: "assets/banner/eren.gif",
     avatar: "assets/avatar/kurumi.webp",
     skills: [
       { icon: "fab fa-react", color: "text-blue-500" },
