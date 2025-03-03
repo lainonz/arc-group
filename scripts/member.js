@@ -23,6 +23,29 @@ const teamMembers = [
     ],
   },
   {
+    name: "Raffasha Ariadiza",
+    role: "Laravel Developer",
+    image: "assets/banner/chaewon.gif",
+    avatar: "assets/avatar/pacar.jpg",
+    skills: [
+      { icon: "fab fa-react", color: "text-blue-500" },
+      { icon: "fab fa-laravel", color: "text-red-500" },
+      { icon: "fa-brands fa-node-js", color: "text-green-500" },
+      { icon: "fab fa-circle-xmark", color: "text-red-500" },
+    ],
+    message: "I love Kim Minjeong and Kim Chaewon",
+    socialLinks: [
+      { icon: "fab fa-instagram", url: "https://www.instagram.com/raffasha.suba/" },
+      { icon: "fab fa-github", url: "https://github.com/Junkyii" },
+      {
+        icon: "fab fa-linkedin-in",
+        url: "https://www.linkedin.com/in/raffasha-ariadiza-186771310/",
+      },
+      { icon: "fas fa-envelope", url: "mailto:ariadizaraffasha@gmail.com" },
+      { icon: "fas fa-globe", url: "https://raldelrey.my.id" },
+    ],
+  },
+  {
     name: "Herlangga Maulani",
     role: "Penetration Tester",
     image: "assets/banner/girl.gif",
