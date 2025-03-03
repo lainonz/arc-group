@@ -1,7 +1,7 @@
 const teamMembers = [
   {
     name: "Arsal Nawfal",
-    role: "-",
+    role: "Web Developer",
     image: "assets/banner/light.gif",
     avatar: "assets/avatar/arsal.jpg",
     skills: [
